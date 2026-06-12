@@ -2,6 +2,11 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[2]
+csv_file = BASE_DIR / "data" / "energy_log.csv"
+
+df = pd.read_csv(csv_file)
 
 with st.sidebar:
 
@@ -29,8 +34,13 @@ st.set_page_config(
 
 st.title("📊 Energy Analytics Center")
 
-df = pd.read_csv("../data/energy_log.csv")
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+csv_file = BASE_DIR / "data" / "energy_log.csv"
+
+df = pd.read_csv(csv_file)
 # -----------------------------
 # SUMMARY CARDS
 # -----------------------------

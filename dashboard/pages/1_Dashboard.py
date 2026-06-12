@@ -5,6 +5,11 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from streamlit_autorefresh import st_autorefresh
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[2]
+csv_file = BASE_DIR / "data" / "energy_log.csv"
+
+df = pd.read_csv(csv_file)
 
 st.markdown("""
 <div style="
@@ -47,7 +52,13 @@ st.set_page_config(
 st_autorefresh(interval=5000, key="refresh")
 
 # Load Data
-df = pd.read_csv("../data/energy_log.csv")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+csv_file = BASE_DIR / "data" / "energy_log.csv"
+
+df = pd.read_csv(csv_file)
 latest = df.iloc[-1]
 
 voltage = latest["Voltage"]
