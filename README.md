@@ -1,5 +1,9 @@
 # ⚡ IoT Smart Home Energy Monitoring System
 
+## Live Demo
+
+https://iot-smart-home-energy-monitoring-system-l6bbudxm5t5rbn42kta2m4.streamlit.app/
+
 ## 📌 Overview
 
 The **IoT Smart Home Energy Monitoring System** is an intelligent energy management platform designed to monitor, analyze, and optimize household energy consumption.
